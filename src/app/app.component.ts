@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
   <hr>
   <div style="background-color: yellow;">
 <app-home> </app-home>
+<h1>{{title}}</h1>
+<input type= "text" [value]= "title">
 </div>
   `,
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'proj1';
