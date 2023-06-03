@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   //templateUrl: './app.component.html',
   template:`<p>Bonjour</p>
+<app-home [pageName]="title2 "> </app-home>
+
   <hr>
   <div style="background-color: yellow;">
 <app-home> </app-home>
@@ -15,4 +17,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proj1';
+  title2="proj2"
 }
