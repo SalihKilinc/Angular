@@ -22,7 +22,7 @@ import { Component } from '@angular/core';
 
 {{name}} 
  
--->   
+-->
 
   `,
   styleUrls: ['./app.component.scss']
