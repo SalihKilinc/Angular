@@ -21,8 +21,8 @@ import { Component } from '@angular/core';
 <input type="text" [(ngModel)]="name">  <br>
 
 {{name}} 
-
--->
+ 
+-->   
 
   `,
   styleUrls: ['./app.component.scss']
