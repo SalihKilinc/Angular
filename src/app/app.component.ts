@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   //templateUrl: './app.component.html',
   template:`<p>Bonjour</p>
 
-<app-home [pageName]="title3 ">   //Property Binding</app-home>
+<app-home [pageName]=" ">   //Property Binding</app-home>
 <!--
 
 
@@ -38,10 +38,13 @@ ayni anda birden fazla name doldurur . react da yapilan rafce sonrasi js isimler
 <p>{{text}} à tous</p>  <!-- ngNonBindable operatoru -->
  
 
-<!--Nullable operatoru  -->
+<!--Nullable operatoru  
 
 
-<p>{{person?.name}}</p>  <!--Nullable operatorunde ternary mantigi vardir soru isareti olmazsa hata alinirbos olmasina karsin alinan bir onlemdir -->
+<p>{{person?.name}}</p>  
+<!--Nullable operatorunde ternary mantigi vardir soru isareti olmazsa hata alinirbos olmasina karsin alinan bir onlemdir -->
+
+
 
   `,
   styleUrls: ['./app.component.scss']
