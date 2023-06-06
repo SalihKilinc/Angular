@@ -45,6 +45,26 @@ ayni anda birden fazla name doldurur . react da yapilan rafce sonrasi js isimler
 <!--Nullable operatorunde ternary mantigi vardir soru isareti olmazsa hata alinirbos olmasina karsin alinan bir onlemdir -->
 
 
+<!-- ngFor Directive  
+<ul>
+  <li *ngFor="let name of names ">{{name}}</li>
+  <li *ngFor="let name of names; index as i "> {{name}}- {{i}}</li>
+  <li *ngFor="let name of names; let index = index let first =first; "> {{name}}- {{index}} {{first}}</li>  // ilk elemani goster ismi goster indexi goster 
+</ul>
+
+-->
+
+<!-- ngIf  
+
+<div *ngIf="visible">Bonjour true yaparsak alttakini ezer ve bonjour gorunur </div>
+<div *ngIf="false">Bonjour yazisini false ile call yaparsak ekranda gorunmez</div>  
+
+-->
+
+<!-- ngIf Else -->
+
+<div *ngIf="visible;else elseContent">Bonjour true yaparsak asagidan alttakini ezer ve bonjour gorunur </div>
+<ng-template #elseContent> Bonjour yazisini false ile call yaparsak ekranda gorunmez  </ng-template>
 
   `,
   styleUrls: ['./app.component.scss']
@@ -57,4 +77,8 @@ export class AppComponent {
   sayi :number= 5;  // number operatoru ile esitlik veya islem yapilmaz bu kisimda sadce yazdirilir
   text: string="Salut";
   person : {name:string ,surname : string}
+  names: string  [] = ["Alex" , "Haaland" , "Ilkay" , "Mbappe" , "Benzema"]
+visible : boolean =false;
+
+
 }
