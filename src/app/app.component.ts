@@ -61,12 +61,26 @@ ayni anda birden fazla name doldurur . react da yapilan rafce sonrasi js isimler
 
 -->
 
-<!-- ngIf Else -->
+<!-- ngIf Else 
 
 <div *ngIf="visible;else elseContent">Bonjour true yaparsak asagidan alttakini ezer ve bonjour gorunur </div>
 <ng-template #elseContent> Bonjour yazisini false ile call yaparsak ekranda gorunmez  </ng-template>
+-->
 
+<!-- ngSwitch 
+<div [ngSwitch]="num">
+  <div ngSwitchCase="1">num 1</div>
+  <div ngSwitchCase="2">number2 else if yapisindan ziyade bu operator kullanilir</div>
+  <div ngSwitchDefault>null</div>
+</div>
+-->
+
+<!-- ngStyle 
+<input type="text" [ngStyle]="style"]>
+-->
   `,
+
+  styles: [".myclass{background-color :red;}"],
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
@@ -79,6 +93,13 @@ export class AppComponent {
   person : {name:string ,surname : string}
   names: string  [] = ["Alex" , "Haaland" , "Ilkay" , "Mbappe" , "Benzema"]
 visible : boolean =false;
+num : number =1;
+style: any ={
+ " background-color " : "red",
+ "color" : "white",
+ "font-size": "12px",
+ "tek classs uzerinden atama yaptik react variable gibi": ""
+}
 
 
 }
