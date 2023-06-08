@@ -78,6 +78,14 @@ ayni anda birden fazla name doldurur . react da yapilan rafce sonrasi js isimler
 <!-- ngStyle 
 <input type="text" [ngStyle]="style"]>
 -->
+
+<!-- Directive Olusturma 
+Not= 
+* ng g d directive/yazilacakad yazarak directive dosyasi olusturduruyoruz
+*
+-->
+
+
   `,
 
   styles: [".myclass{background-color :red;}"],
