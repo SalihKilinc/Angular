@@ -7,13 +7,17 @@ import { HomeComponent } from './home/home.component';
 //import { Com1Component } from './com1/com1.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { FormsModule } from '@angular/forms';
+import { ExampleDirective } from './dırectıves/example.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
    
-    Comp1Component
+    Comp1Component,
+        ExampleDirective,
+  
   ],
   imports: [
     BrowserModule,
