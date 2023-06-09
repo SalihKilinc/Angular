@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit ,Input } from '@angular/core';
+import { Directive, ElementRef, OnInit ,Input , HostListener ,HostBinding} from '@angular/core';
 
 
 @Directive({
@@ -16,4 +16,12 @@ export class ExampleDirective implements OnInit {
      }
 
 @Input() color:string;
+
+@HostListener("click")
+onClick(){
+  alert("HostListener ozelligi ile alert kismi calisti")
+}
+@HostBinding("style.color")
+writingColor:string ="blue"   // bu ozllikle app ts icinde olan yazi rengine mudahale ettiik
+
 }
