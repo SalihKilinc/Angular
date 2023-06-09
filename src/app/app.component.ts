@@ -3,7 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   //templateUrl: './app.component.html',
-  template:`<p>Bonjour</p>
+  template:`
+  <div appExample color="yellow" >Bonjour</div>
+  
+
+  <!--
+  <p appExample>Bonjour directive in koseli parntezli hali (attribute hali)</p>
+  <p class="appExample">Merhaba directivenin class verilmis hali</p>
+
+-->
 
 <app-home [pageName]=" ">   //Property Binding</app-home>
 <!--
@@ -81,7 +89,9 @@ ayni anda birden fazla name doldurur . react da yapilan rafce sonrasi js isimler
 
 <!-- Directive Olusturma 
 Not= 
-* ng g d directive/yazilacakad yazarak directive dosyasi olusturduruyoruz
+* ng g d directive/yazilacakad yazarak directive dosyasi olusturuyoruz
+* Bir directivin sinif adinin sonunda Directive olmasi isimsel bir kulturdur pas de nessesaire
+*Bir directive nin directive olabilmesi icin @Directive decoratori tarafindan isaretlenmesi gerekir
 *
 -->
 
