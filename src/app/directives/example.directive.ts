@@ -24,4 +24,5 @@ onClick(){
 @HostBinding("style.color")
 writingColor:string ="blue"   // bu ozllikle app ts icinde olan yazi rengine mudahale ettiik
 
+
 }
