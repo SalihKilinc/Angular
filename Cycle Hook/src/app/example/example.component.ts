@@ -58,6 +58,6 @@ export class ExampleComponent
     console.log('7.ngAfterViewChecked'); // sayyfada degisiklik oldugunda goruneni kontrol ediyor
   }
   ngOnDestroy(): void {
-   console.log("8.ngOnDestroy")
+   console.log("8.ngOnDestroy")  // componenti imha eder destroy tahrip demek
   }
 }
