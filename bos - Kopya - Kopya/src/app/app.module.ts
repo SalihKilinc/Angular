@@ -1,16 +1,17 @@
-import { DEFAULT_CURRENCY_CODE, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { CustomPipe } from './pipes/custom.pipe';
+import { ParentComponent } from './componnets/parent/parent.component';
+import { ChildsComponent } from './componnets/childs/childs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomPipe
-   
-   
+    ParentComponent,
+    ChildsComponent,
   
   ],
   imports: [
@@ -18,7 +19,7 @@ import { CustomPipe } from './pipes/custom.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [{provide:DEFAULT_CURRENCY_CODE, useValue : "$" }, CustomPipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
