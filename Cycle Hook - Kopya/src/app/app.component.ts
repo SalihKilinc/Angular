@@ -3,15 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   //templateUrl: './app.component.html',
-  template:`
-<app-example data="selam">dfghfdégédv</app-example>
+  template:`<p>Bonjour</p>
+
 
   `,
 
 
 })
 export class AppComponent {
-  title="component-life-cycle-hook"
+  
 
 }
 
