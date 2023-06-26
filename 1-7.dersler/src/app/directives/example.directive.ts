@@ -1,7 +1,7 @@
 import { Directive, ElementRef, OnInit ,Input , HostListener ,HostBinding} from '@angular/core';
 
 
-@Directive({
+@Directive({ 
   selector: '[appExample]'   // Uygulama seviyesinde directive i kullanmamizi saglar
   // selector iki sekilde app ts kismina gider koseli parantez olursa icindeki yazilir app ts de ornegi var
   // eger sinif verilecekse class yazilarak basa kodlanir app ts de ornegi var
