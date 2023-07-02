@@ -43,7 +43,7 @@ export class AppComponent {
       surname: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       tel: [''],
-    });
+    }, {Validators:[]});
   }
   get name() {
     return this.frm.get('name');
