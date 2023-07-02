@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { capitalletterValidator } from './validators/func'; // validators classinin icinde verdigimiz donguden dolayi ilk harfin buyuk olmasini istedik yoksa hata verir
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   template: `
     <form [formGroup]="frm" (ngSubmit)="onSubmit()">
       <input type="text" placeholder="Name" formControlName="name" /> <br />
-      <div *ngIf="!name.valid && (name.dirty || name.touched)"> {{name.errors | json}} </div>
-      
-      <input type="text" placeholder="Surname" formControlName="surname" /><br />
-      <div *ngIf="!surname.valid && (surname.dirty || surname.touched)"> {{surname.errors | json}} </div>
+      <div *ngIf="!name.valid && (name.dirty || name.touched)">
+        {{ name.errors | json }}
+      </div>
+
+      <input
+        type="text"
+        placeholder="Surname"
+        formControlName="surname"
+      /><br />
+      <div *ngIf="!surname.valid && (surname.dirty || surname.touched)">
+        {{ surname.errors | json }}
+      </div>
 
       <input type="text" placeholder="Email" formControlName="email" /> <br />
-      <div *ngIf="!email.valid && (email.dirty || email.touched)"> {{email.errors | json}} </div>
+      <div *ngIf="!email.valid && (email.dirty || email.touched)">
+        {{ email.errors | json }}
+      </div>
 
       <input type="text" placeholder="Tel" formControlName="tel" /> <br />
       <button type="submit">Send</button>
@@ -25,9 +36,12 @@ export class AppComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.frm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(3)]], // requerid olarak en az uc harf belirldik
-      surname: ['', [Validators.required , Validators.minLength(2)] ],
-      email: ['',[Validators.required , Validators.email] ],
+      name: [
+        '',
+        [Validators.required, Validators.minLength(3), capitalletterValidator],
+      ], // requerid olarak en az uc harf belirldik
+      surname: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
       tel: [''],
     });
   }
